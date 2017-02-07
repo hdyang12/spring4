@@ -4,12 +4,12 @@ package com.yh.service;
 public class BeanWayService {
 	
 	private void init() {
-		System.out.println("BeanWayService´´½¨");
+		System.out.println("BeanWayServiceåˆ›å»º");
 
 	}
 	
 	private void destroy() {
-		System.out.println("BeanWayServiceÏú»Ù");
+		System.out.println("BeanWayServiceé”€æ¯");
 
 	}
 

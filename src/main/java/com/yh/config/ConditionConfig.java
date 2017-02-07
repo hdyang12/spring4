@@ -11,8 +11,8 @@ import com.yh.service.ListService;
 import com.yh.service.WindowsListService;
 
 /**
- * Ìõ¼ş×¢½â @Conditional
- * ÔÚ Spring BootÖĞ½«»á´óÁ¿ÓÃµ½Ìõ¼ş×¢½â
+ * æ¡ä»¶æ³¨è§£ @Conditional
+ * åœ¨ Spring Bootä¸­å°†ä¼šå¤§é‡ç”¨åˆ°æ¡ä»¶æ³¨è§£
  * @author yh
  *
  */

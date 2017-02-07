@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 /**
- * ¼Æ»®ÈÎÎñÖ´ĞĞÀà
+ * è®¡åˆ’ä»»åŠ¡æ‰§è¡Œç±»
  * @author yh
  *
  */
@@ -15,16 +15,16 @@ import org.springframework.stereotype.Service;
 public class ScheduledTaskService {
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 	
-	//Ã¿¸ô¹Ì¶¨Ê±¼ä5sÖ´ĞĞ
+	//æ¯éš”å›ºå®šæ—¶é—´5sæ‰§è¡Œ
 	@Scheduled(fixedRate = 5000)
 	public void reportCurrentTime(){
-		System.out.println("Ã¿¸ô5ÃëÖ´ĞĞÒ»´Î£º" + dateFormat.format(new Date()));
+		System.out.println("æ¯éš”5ç§’æ‰§è¡Œä¸€æ¬¡ï¼š" + dateFormat.format(new Date()));
 	}
 	
-	//Ã¿ÌìµÄ15:00:00Ö´ĞĞ
+	//æ¯å¤©çš„15:00:00æ‰§è¡Œ
 	@Scheduled(cron = "00 03 15 ? * *")
 	public void fixTimeExecution(){
-		System.out.println("ÔÚÖ¸¶¨Ê±¼ä£º" + dateFormat.format(new Date()) + "Ö´ĞĞ");
+		System.out.println("åœ¨æŒ‡å®šæ—¶é—´ï¼š" + dateFormat.format(new Date()) + "æ‰§è¡Œ");
 	}
 
 }

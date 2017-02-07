@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @Configuration
 @ComponentScan("com.yh.service")
-@EnableScheduling	//¿ªÆô¶Ô¼Æ»®ÈÎÎñµÄÖ§³Ö
+@EnableScheduling	//å¼€å¯å¯¹è®¡åˆ’ä»»åŠ¡çš„æ”¯æŒ
 public class TaskSchedulerConfig {
 
 }

@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.yh.service.BeanWayService;
 
-//@Configuration是一个组合@Component注解
+//@Configuration鏄竴涓粍鍚園Component娉ㄨВ
 @Configuration
 @ComponentScan("com.yh.service")
 public class DiConfig{

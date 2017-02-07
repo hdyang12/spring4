@@ -12,9 +12,9 @@ import org.springframework.stereotype.Component;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Configuration	//×éºÏ@ConfigurationÔª×¢½â
-@Component		//×éºÏ@ComponentÔª×¢½â
+@Configuration	//ç»„åˆ@Configurationå…ƒæ³¨è§£
+@Component		//ç»„åˆ@Componentå…ƒæ³¨è§£
 public @interface YhConfiguration {
-	String[] value() default{};	//¸²¸Çvalue²ÎÊı
+	String[] value() default{};	//è¦†ç›–valueå‚æ•°
 
 }

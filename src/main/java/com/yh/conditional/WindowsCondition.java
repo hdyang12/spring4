@@ -5,13 +5,13 @@ import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
- * 条件注解
- * @author viruser
+ * 鏉′欢娉ㄨВ
+ * @author yh
  *
  */
 public class WindowsCondition implements Condition {
 
-	//判定windows条件
+	//鍒ゅ畾windows鏉′欢
 	@Override
 	public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
 		return context.getEnvironment().getProperty("os.name").contains("Windows");

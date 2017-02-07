@@ -4,7 +4,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 /**
- * ¶àÏß³ÌÈÎÎñÖ´ĞĞÀà
+ * å¤šçº¿ç¨‹ä»»åŠ¡æ‰§è¡Œç±»
  * @author yh
  *
  */
@@ -13,12 +13,12 @@ public class AsyncTaskService {
 	
 	@Async
 	public void executeAsyncTask(Integer i){
-		System.out.println("Ö´ĞĞÒì²½ÈÎÎñ £º" + i);
+		System.out.println("æ‰§è¡Œå¼‚æ­¥ä»»åŠ¡ ï¼š" + i);
 	}
 	
 	@Async
 	public void executeAsyncTaskPlus(Integer i){
-		System.out.println("Ö´ĞĞÒì²½ÈÎÎñ +1£º" + i);
+		System.out.println("æ‰§è¡Œå¼‚æ­¥ä»»åŠ¡ +1ï¼š" + i);
 	}
 
 }

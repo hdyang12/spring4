@@ -10,12 +10,12 @@ import com.yh.config.TaskSchedulerConfig;
 import com.yh.service.ScheduledTaskService;
 
 /**
- * Spring²âÊÔÀà
+ * Springæµ‹è¯•ç±»
  * @author yh
  *
  */
-@RunWith(SpringJUnit4ClassRunner.class)	//ÔÚJUnit»·¾³ÏÂÌá¹©Spring TestContext FrameworkµÄ¹¦ÄÜ
-//ÓÃÀ´¼ÓÔØÅäÖÃapplication,ÆäÖĞclasses ÊôĞÔÓÃÀ´¼ÓÔØÅäÖÃÀà
+@RunWith(SpringJUnit4ClassRunner.class)	//åœ¨JUnitç¯å¢ƒä¸‹æä¾›Spring TestContext Frameworkçš„åŠŸèƒ½
+//ç”¨æ¥åŠ è½½é…ç½®application,å…¶ä¸­classes å±æ€§ç”¨æ¥åŠ è½½é…ç½®ç±»
 @ContextConfiguration(classes = {TaskSchedulerConfig.class})
 public class SpringTests {
 	@Autowired

@@ -11,7 +11,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 @Configuration
 @ComponentScan("com.yh.service")
-//@YhConfiguration("com.yh.service")//组合注解;可以替代 @Configuration和@ComponentScan
+//@YhConfiguration("com.yh.service")//缁勫悎娉ㄨВ;鍙互鏇夸唬 @Configuration鍜孈ComponentScan
 @EnableAsync
 public class TaskExecutorConfig implements AsyncConfigurer{
 
