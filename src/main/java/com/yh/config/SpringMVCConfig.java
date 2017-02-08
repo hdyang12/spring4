@@ -3,6 +3,8 @@ package com.yh.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
@@ -39,6 +41,14 @@ public class SpringMVCConfig extends WebMvcConfigurerAdapter{
 		return new DemoInterceptor();
 	}
 	
+	//文件上传
+	@Bean
+	public MultipartResolver multipartResolver(){
+		CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+		multipartResolver.setMaxUploadSize(10 *1024 * 1024);//10M
+		return multipartResolver;
+	}
+	
 	//重写方法,对SpringMVC进行配置
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -60,6 +70,8 @@ public class SpringMVCConfig extends WebMvcConfigurerAdapter{
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry){
 		registry.addViewController("/index").setViewName("/index");
+		registry.addViewController("/toUpload").setViewName("/upload");
+		registry.addViewController("/sse").setViewName("/sse");
 	}
 	
 	//在Spring MVC 中,路径参数如果带"."的话,"."后面的值将被忽略(/xx.yy)
