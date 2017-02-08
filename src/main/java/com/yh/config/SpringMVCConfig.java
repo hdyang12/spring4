@@ -5,9 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
@@ -52,21 +50,5 @@ public class SpringMVCConfig extends WebMvcConfigurerAdapter{
 		registry.addInterceptor(demoInterceptor());
 	}
 	
-	/**
-	 * 其他配置
-	 */
-	
-	//单纯的页面转向;/index直接跳转到/index.jsp
-	@Override
-	public void addViewControllers(ViewControllerRegistry registry){
-		registry.addViewController("/index").setViewName("/index");
-	}
-	
-	//在Spring MVC 中,路径参数如果带"."的话,"."后面的值将被忽略(/xx.yy)
-	@Override
-	public void configurePathMatch(PathMatchConfigurer configurer){
-		//重写configurePathMatch方法,下面设为false;不忽略"."后面的参数
-		configurer.setUseSuffixPatternMatch(false);
-	}
 
 }
